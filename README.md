@@ -32,3 +32,44 @@ More requirements:
 ### Mocking
 
 - https://relishapp.com/rspec/rspec-mocks/docs/basics/test-doubles
+
+
+# My notes of wot I did
+
+### User stories
+
+> As a user  
+> in order to keep track of my friends' birthdays  
+> i want a way to store them
+
+> As a user  
+> so that I can see all my friends' birthdays  
+> I want a way to print out their names and birthdays in a tidy format
+
+> As a user  
+> so that I can tell if it's someone's birthday  
+> I want a way to search through the stored birthdays for ones which match today's date
+
+### Imagine how to use it for these stories
+
+```
+> birthdays = FriendsBirthdays.new
+=> #<FriendsBirthdays:0x0.........>
+> birthdays.add("Snoop Dogg", 20, 10, 1971) # Snoop Dogg's birthday is 20th October 1971
+=> "Added Snoop Doggy Dogg's birthday"
+> birthdays.add("Jacob Rees Mogg", 24, 5, 1969) # Jacob Rees Mogg's birthday is 24th May 1969
+=> "Added Jacob Rees Mogg's birthday"
+> birthdays.add("Mary Poppins", 8, 3, 1900) # Mary Poppins's birthday is 8th March 1969
+=> "Added Jacob Rees Mogg's birthday"
+```
+
+```
+# after having entered the birthdays in the previous block
+> birthdays.print
+=> Snoop Dogg: 20/10/1971
+   Jacob Rees Mogg: 24/5/1969
+   Mary Poppins: 8/3/1900
+```
+
+```
+```
